@@ -1,4 +1,4 @@
-package kolkokrzyzyk;
+package com.company;
 
 import java.util.Random;
 import javafx.scene.input.MouseEvent;
@@ -187,7 +187,7 @@ public class KolkoKrzyzyk extends Application {
                     oddaj[0] = -1;
                     oddaj[1] = -1;
                 }
-                
+
                 if(tabPol[x][y-1].isObecnosc() == true && tabPol[x][y-1].getZnak().equals("O")== true && tabPol[x][y+1].isObecnosc() == false){
                     oddaj[0] = x;
                     oddaj[1] = y+1;
@@ -219,7 +219,7 @@ public class KolkoKrzyzyk extends Application {
                     oddaj[0] = -1;
                     oddaj[1] = -1;
                 }
-                 if(tabPol[x+1][y].isObecnosc() == true && tabPol[x+1][y].getZnak().equals("O")== true && tabPol[x-1][y].isObecnosc() == false){
+                if(tabPol[x+1][y].isObecnosc() == true && tabPol[x+1][y].getZnak().equals("O")== true && tabPol[x-1][y].isObecnosc() == false){
                     oddaj[0] = x-1;
                     oddaj[1] = y;
                     return oddaj;
@@ -248,7 +248,7 @@ public class KolkoKrzyzyk extends Application {
                     oddaj[0] = -1;
                     oddaj[1] = -1;
                 }
-                 if(tabPol[x][y-1].isObecnosc() == true && tabPol[x][y-1].getZnak().equals("O")== true && tabPol[x][y+1].isObecnosc() == false){
+                if(tabPol[x][y-1].isObecnosc() == true && tabPol[x][y-1].getZnak().equals("O")== true && tabPol[x][y+1].isObecnosc() == false){
                     oddaj[0] = x;
                     oddaj[1] = y+1;
                     return oddaj;
@@ -258,7 +258,7 @@ public class KolkoKrzyzyk extends Application {
                     oddaj[1] = y-1;
                     return oddaj;
                 }
-                
+
             } else {//x==1 && y ==2
 
                 for (int i = 0; i < 2; i++) {
@@ -312,7 +312,7 @@ public class KolkoKrzyzyk extends Application {
 
         naj[0] = losowyStart[0];
         naj[1] = losowyStart[1];
-      //  System.out.println("LosowyStart: naj[0]= " + naj[0] + " naj[1]= " + naj[1]);
+        //  System.out.println("LosowyStart: naj[0]= " + naj[0] + " naj[1]= " + naj[1]);
         //System.out.println("WagaLosowego startu: " + tabPol[naj[0]][naj[1]].getWaga());
         drukujWagi();
 
@@ -327,7 +327,7 @@ public class KolkoKrzyzyk extends Application {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 if (tabPol[i][j].getWaga() == tabPol[naj[0]][naj[1]].getWaga() && tabPol[i][j].isObecnosc() == false) {
-                   // System.out.println("WEW x: "+tabPol[i][j].getX()+" Y: "+tabPol[i][j].getY()+" obecnosc: "+tabPol[i][j].isObecnosc());
+                    // System.out.println("WEW x: "+tabPol[i][j].getX()+" Y: "+tabPol[i][j].getY()+" obecnosc: "+tabPol[i][j].isObecnosc());
                     //System.out.println(tabPol[i][j].getWaga() > tabPol[naj[0]][naj[1]].getWaga());
                     //System.out.println(tabPol[i][j].isObecnosc() == false);
                     tabPowtorkiX[iterator] = i;
@@ -534,7 +534,7 @@ public class KolkoKrzyzyk extends Application {
         linia2.setStyle("-fx-stroke: #ffffff;");
         linia2.setStyle("-fx-stroke-width: 2px;");
 */
-        
+
         Line[] tab = {linia1, linia2};
         return tab;
     }
@@ -552,15 +552,15 @@ public class KolkoKrzyzyk extends Application {
             }
         }
         if(czyMozna == true){
-        tura = !tura;
-        if (tura == true) {
-            komputerOdpowiedz();
-        }
+            tura = !tura;
+            if (tura == true) {
+                komputerOdpowiedz();
+            }
         }
     }
 
     public void komputerOdpowiedz() {
-        
+
         System.out.println("OstatnieKoloX: "+ostatnieKolo[0]);
         System.out.println("OstatnieKoloY: "+ostatnieKolo[1]);
         int zwyciestwo[] = czyWygralem();
@@ -611,12 +611,12 @@ public class KolkoKrzyzyk extends Application {
 
         stackPane.getChildren().addAll(button,label1,label2);
         scene = new Scene(stackPane, 290, 390);
-        System.out.println("ścieżkaString: "+getClass().getResource("kolorki.css").toString());
-        System.out.println("ścieżkaPath: "+getClass().getResource("kolorki.css").getPath());
-        System.out.println("ścieżkaExternal: "+getClass().getResource("kolorki.css").toExternalForm());
-        
-        scene.getStylesheets().add(getClass().getResource("kolorki.css").toExternalForm());
-        
+        System.out.println("ścieżkaString: "+getClass().getResource("/kolorki.css").toString());
+        System.out.println("ścieżkaPath: "+getClass().getResource("/kolorki.css").getPath());
+        System.out.println("ścieżkaExternal: "+getClass().getResource("/kolorki.css").toExternalForm());
+
+        scene.getStylesheets().add(getClass().getResource("/kolorki.css").toExternalForm());
+
     }
 
     @Override
@@ -652,8 +652,9 @@ public class KolkoKrzyzyk extends Application {
         window.show();
     }
     public static void main(String[] args) {
-        
+
         launch(args);
         System.out.println("XD");
     }
 }
+

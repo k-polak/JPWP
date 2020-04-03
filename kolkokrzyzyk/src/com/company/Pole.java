@@ -1,4 +1,4 @@
-package kolkokrzyzyk;
+package com.company;
 
 public class Pole {
     int x;
@@ -55,7 +55,7 @@ public class Pole {
     public void setZnak(String znak) {
         this.znak = znak;
     }
-    
+
     public Pole(int x,int y,int waga,boolean obecnosc,int idWagi){
         this.x = x;
         this.y = y;
@@ -64,3 +64,4 @@ public class Pole {
         this.idWagi = idWagi;
     }
 }
+

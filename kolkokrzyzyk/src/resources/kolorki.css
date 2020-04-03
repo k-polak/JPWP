@@ -1,5 +1,5 @@
 .root{
-   -fx-background-image: url('plansza.png');     
+   -fx-background-image: url('/plansza.png');
 } 
 #myd{
     -fx-background-color: #57C6EB;
