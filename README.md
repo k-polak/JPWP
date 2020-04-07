@@ -18,3 +18,7 @@ oraz  jak tego typu aplikacja powinna być zaprojektowana. Ten program posiada j
 gdzie komputer przegrywa. Wyobraź sobie, że dostałeś taki kod w pracy i musisz ten błąd naprawić. Najprawdopodobniej mniej czasu
 i nerwów by kosztowało napisanie tej gry od nowa. Jeżeli jednak ktoś by chciał spróbować swoich sił, do skompilowania kodu będzie 
 potrzebna Java 8.
+
+## Prezentacja 
+
+https://drive.google.com/open?id=1rC_QD5GBsN8ALVCm2kINwhikNVlnov_0
